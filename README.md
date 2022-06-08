@@ -3,14 +3,19 @@
  
     -- Konu başlıkları --
 
- --VERİ TİPLERİ
- --Çift tırnak Tek tırnak kullanımı
- --Define (sabitler)
- --Sihirli Sabitler
- --KARŞILAŞTIRMA OPERATÖRLERİ
+ -- VERİ TİPLERİ
+ -- Çift tırnak Tek tırnak kullanımı
+ -- Define (sabitler)
+ -- Sihirli Sabitler
+ -- KARŞILAŞTIRMA OPERATÖRLERİ
  -- İf-Else Koşulları
  -- Switch-Case
  -- For Döngüsü
  -- Foreach Döngüsü
  -- While Döngüsü
  -- Do while Döngüsü
+ -- Diziler
+ -- Dizilerde Sıralama Fonksiyonları
+ -- Dizi Elemanlarını Düzenlemek Silmek
+ -- Fonksiyon Oluşturmak
+ 

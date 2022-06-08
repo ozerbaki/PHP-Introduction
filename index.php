@@ -182,3 +182,107 @@ do
 }while ($sayi<5);
 */
 
+/*
+    -- Diziler --
+    
+    //I. Yol
+    //$meyveler = array("Erik", "Şeftali", "Kayısı");
+    //print_r ($meyveler);
+    
+    //II. Yol
+    $meyveler[0] = "Erik";
+    $meyveler[1] = "Şeftali";
+    $meyveler[2] = "Kayısı";
+    echo $meyveler[0];
+    
+    
+    // İki boyutlu dizi örneği -- İç içe dizi
+    $sporlar = array(
+        "ToplaOynanlar" => array(
+            1=>"Futbol", 2=>"Basketbol", 3=>"Tenis"),
+        "Atletizm" =>array(
+            4=>"Koşu Yarışı", 5=>"Uzun Atlama")
+    );
+    print_r($sporlar);
+    echo $sporlar["ToplaOynanlar"][3];
+*/
+
+/*
+-- Dizilerde Sıralama Fonksiyonları --
+
+sort: [değer] küçükten büyüğe, key-value korunmaz
+rsort: [değer] büyükten küçüğe, key-value korunmaz
+shuffle: [değer] rastgele, key-value korunmaz
+asort: [değer] küçükten büyüğe, key-value korunur
+arsort: [değer] büyükten küçüğe, key-value korunur
+ksort: [key] küçükten büyüğe, key-value korunur
+krsort: [key] büyükten küçüğe, key-value korunur
+
+*/
+
+//$sayilar=array(
+//    /* Key */ /* => */ /* Değer */
+//    "bir"=>1,
+//    "iki"=>2,
+//    "uc"=>3,
+//    "dort"=>4
+//);
+
+/*
+    sort($sayilar);
+    print_r ($sayilar);
+    echo "<br>";
+    rsort($sayilar);
+    print_r ($sayilar);
+    echo "<br>";
+    shuffle($sayilar);
+    print_r ($sayilar);
+    echo "<br>";
+    asort($sayilar);
+    print_r ($sayilar);
+    echo "<br>";
+    arsort($sayilar);
+    print_r ($sayilar);
+    echo "<br>";
+    ksort($sayilar);
+    print_r ($sayilar);
+    echo "<br>";
+    krsort($sayilar);
+    print_r ($sayilar);
+*/
+
+
+/*
+    -- Dizi Elemanlarını Düzenlemek/Silmek --
+
+    $isimler = array("ali","ahmet","ebru","eyşan");
+    unset($isimler[2]); //Silme işlemi
+    print_r ($isimler);
+    
+    $isimler[3]="Muhittin"; //Düzenleme/Update İşlemi
+    print_r ($isimler);
+
+*/
+
+
+/*
+    -- Fonksiyon Oluşturmak --
+    
+    --Geriye değer döndürmeyen
+    function carpma($sayi1, $sayi2)
+    {
+        echo $sayi1 * $sayi2;
+    }
+    
+    carpma(11, 2);
+
+    --Geriye değer döndüren
+    
+    function carpma($sayi1, $sayi2)
+        {
+            return $sayi1*$sayi2;
+        }
+        
+    echo carpma(2, 26);
+
+*/
