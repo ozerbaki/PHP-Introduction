@@ -286,3 +286,191 @@ krsort: [key] büyükten küçüğe, key-value korunur
     echo carpma(2, 26);
 
 */
+/*
+    -- Fonksiyon Örnekleri --
+
+    function ornek($sayi = null)
+    {
+        if ($sayi == null) 
+        {
+            echo "Sayı Belirtmediniz! :(";
+        }
+        elseif (!is_int($sayi)) //Sayı değişkeni int değil mi ? sorusunu sorduk true dönerse içeri girer.
+        {
+            echo "Geçerli Bir Sayı Değeri Belirtiniz :(";
+        }
+        else {
+            for ($i=1; $i <= $sayi; $i++) 
+            { 
+                //echo "Merhaba";
+                echo "$i  <br>";
+            }
+        }
+    }
+    //ornek();
+    //ornek("asdf");
+    ornek(10);
+
+*/
+
+/*
+    -- Global Değişkenler --
+
+    $sayi1 = 25;
+    $sayi2 = 5;
+    function Topla($a)
+    {
+        global $sayi1, $sayi2; //Global olarak tanımlamazsak kullanmammıza izin vermiyor.
+        return $a + $sayi1 + $sayi2;
+    }
+    echo Topla(10);
+
+*/
+
+/*
+    -- String Fonksiyonlar --
+
+    --strstr ==> içeriyor mu ?
+    $metin = "Merhaba ben Baki.";
+    if (strstr($metin,"ben")) 
+    {
+        echo "var";
+    }
+    else {
+        echo "Yok";
+    }
+
+    --strlen ==> Karakter sayısını verir.
+    $metin = "Merhaba ben Baki.";
+    echo strlen($metin); //Ekran çıktısı : 17
+
+    --substr ==> Metinden parça almamızı sağlar
+    $metin = "Merhaba ben Baki.";
+    // Metin, Başlangıç, Bitiş
+    echo substr($metin, 0, 5); //Ekran çıktısı : Merha
+
+    --str_replace ==> Değiştirme işlemi yapar
+    $metin = "Merhaba ben Baki.";
+    echo str_replace("Baki", "Ahmet", $metin); //Ekran çıktısı : "Merhaba Ben Ahmet" oldu.
+
+    --strtoupper ==> Tamamı büyük harf olur.
+    --strtolower ==> Tamamı küçük harf olur.
+    $metin = "Merhaba ben Baki.";
+    echo strtoupper($metin);
+    echo strtolower($metin);
+
+    --ucfirst ==> İlk harfi büyük yapar.
+    $metin = "merhaba ben Baki.";
+    echo ucfirst($metin);
+
+    --ucwords ==> Tüm kelimelerin ilk harflerini büyük yapar.
+    $metin = "merhaba ben baki.";
+    echo ucwords($metin);
+
+*/
+
+/*
+    -- Matematiksel Fonksiyonlar --
+
+    --floor ==> aşağı yuvarlar.
+    --ceil  ==> yukarı yuvarlar.
+    --round ==> bildiğimiz yuvarlama işelmi.
+    --cos   ==> trigonometik işlemler için.
+    --sin   ==> trigonometik işlemler için.
+    --tan   ==> trigonometik işlemler için.
+    --rand  ==> restgele sayı üretir.
+    --sqrt  ==> karekök alma işlemi.
+    --pow   ==> üs alma işlemi.
+    --abs   ==> mutlak değer işlemi.
+    --max   ==> en büyük sayıyı bulur.
+    --min   ==> en küçük sayıyı bulur.
+    
+    $sayi1 = 10;
+    $sayi2 = 25.9999;
+    
+    //echo floor($sayi2);
+    //echo ceil($sayi2);
+    //echo round($sayi2);
+    //echo cos($sayi1);
+    //echo sin($sayi1);
+    //echo tan($sayi1);
+    //echo rand(111,999);
+    //echo sqrt(16);
+    //echo pow(4, 2);
+    //echo abs(-33);
+    //echo max(1,55,9652,21,2165,564);
+    //echo min(1,55,9652,21,2165,564);
+*/
+
+
+/*
+    -- Date/Time Fonksiyonları --
+
+    date_default_timezone_set("Europe/Istanbul") // Tarihi ve saati kullanırken kaynak göstermemiz bizim için faydalı olabilir. Kiraladığımız sunucu yurtdışında ise türkiye için doğru zamanı elde edemeyebiliriz. Hala saat ve tarih düzelmediyse sunucuya reset atılması gerekebilir.
+    
+    setlocale(LC_ALL,"turkish"); //Dili türkçeye çeviriyoruz.
+
+    //echo date("Y-m-d H:i:s");
+
+    $tarih = "2022-06-08 12:00:00";
+    echo date($tarih);
+*/
+
+/*
+    -- Dizi Fonksiyonları --
+
+    
+    $renkler = array("mavi","siyah","yesil","turuncu","mor","kirmizi","sari");
+    $yaslar = array(15,22,5,55,36,74,65);
+    
+    //var_dump($renkler); 
+    // Çıktısı:
+    //C:\wamp64\www\php\index.php:426:
+    //array (size=7)
+    //0 => string 'mavi' (length=4)
+    //1 => string 'siyah' (length=5)
+    //2 => string 'yesil' (length=5)
+    //3 => string 'turuncu' (length=7)
+    //4 => string 'mor' (length=3)
+    //5 => string 'kirmizi' (length=7)
+    //6 => string 'sari' (length=4)
+    
+    //echo count($yaslar); // Kaç elemanlı olduğunu sayar.
+    
+    //var_dump(is_array($renkler));
+    //Çıktısı:
+    //C:\wamp64\www\php\index.php:441:boolean true
+    
+    //array_push($renkler,"birinci","ikinci"); //Eleman eklemeye yarar.
+    //var_dump($renkler); 
+    
+    //array_pop($renkler); // Dizinin son elemanını siler.
+    //var_dump($renkler);
+    
+    //if (in_array("siyah", $renkler)) //İçeriyor mu?
+    //{
+    //    echo "Var";
+    //}
+    //else {
+    //    echo "Yok";
+    //}
+    
+    //$sonuc = array_diff($renkler, $yaslar); // 1. dizi(A kümesi) ile 2. diziyi(B kümesi) karşılaştırır. A/B küme mantığı ile sonucu verir.
+    //print_r($sonuc);
+*/
+
+
+/*
+    -- Recursive Fonksiyonlar --
+    -- Özyinelemeli(Kendini yineleyen) Fonksiyonlar
+    
+    function faktoriyel($sayi) //4 = 4*3*2*1 ==> 24
+    {
+        if ($sayi==0) 
+        {
+            return 1;
+        }
+        return $sayi * faktoriyel($sayi-1);
+    }
+    echo faktoriyel(4);
+*/

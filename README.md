@@ -21,3 +21,8 @@ Numarsı
 269&emsp;&emsp;&emsp;--&emsp; Fonksiyon Oluşturmak<br>
 290&emsp;&emsp;&emsp;--&emsp; Fonksiyon Örnekleri<br>
 317&emsp;&emsp;&emsp;--&emsp; Global Değişkenler<br>
+331&emsp;&emsp;&emsp;--&emsp; String Fonksiyonlar<br>
+373&emsp;&emsp;&emsp;--&emsp; Matematiksel Fonksiyonlar<br>
+407&emsp;&emsp;&emsp;--&emsp; Date/Time Fonksiyonları<br>
+420&emsp;&emsp;&emsp;--&emsp; Dizi Fonksiyonları<br>
+464&emsp;&emsp;&emsp;--&emsp; Recursive Fonksiyonlar<br>
